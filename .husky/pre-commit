@@ -1,0 +1,32 @@
+#!/bin/sh
+
+if [ -n "$WINDIR" ]; then
+  if command -v node >/dev/null 2>&1; then
+    NODE_CMD="node"
+  else
+    echo "Error: Node.js not found. Please install Node.js or nvm-windows."
+    exit 1
+  fi
+else
+  unset PREFIX
+  export NVM_DIR="$HOME/.nvm"
+  [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
+
+  if ! command -v node >/dev/null 2>&1; then
+    for NODE_PATH in "$HOME/.nvm/versions/node/*/bin/node" "/usr/local/bin/node" "/usr/bin/node"; do
+      if [ -x "$NODE_PATH" ]; then
+        NODE_CMD="$NODE_PATH"
+        break
+      fi
+    done
+
+    if [ -z "$NODE_CMD" ]; then
+      echo "Error: Node.js not found. Please install Node.js or nvm."
+      exit 1
+    fi
+  else
+    NODE_CMD="node"
+  fi
+fi
+
+$NODE_CMD .husky/pre-commit.js

@@ -1,0 +1,237 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
+
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{title}}</title>
+  </head>
+
+  <body
+    style="margin: 0; padding: 0; background-color: #F8FBFF; font-family: Arial, 'Helvetica Neue', Helvetica, sans-serif;"
+  >
+    <table
+      border="0"
+      cellpadding="0"
+      cellspacing="0"
+      width="100%"
+      style="background-color: #E8F4FF; padding: 0 0 20px;"
+    >
+      <tr>
+        <td align="center" style="padding: 20px 0;">
+
+          <table
+            border="0"
+            cellpadding="0"
+            cellspacing="0"
+            width="480"
+            height="500"
+            style="
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+            margin: auto;
+            overflow: hidden;
+          "
+          >
+            <tr>
+              <td
+                align="center"
+                style="
+                background: #1B89E6;
+                background: linear-gradient(
+                  to right,
+                  #1B89E6 0%,
+                  #0B5FA8 50%,
+                  #102A43 100%
+                );
+                padding: 20px;
+                border-bottom-left-radius: 30px;
+                border-bottom-right-radius: 30px;
+              "
+              >
+                <img
+                  src="https://coftech-media-store.s3.us-east-1.amazonaws.com/notifications/coftech-logo.png"
+                  alt="Coftech Bot Logo"
+                  width="100"
+                  style="display: block; color: #1B89E6; margin-bottom: 4px;"
+                />
+                {{#if caseimage.url}}
+                  <img
+                    src={{caseimage.url}}
+                    alt="Notification Image"
+                    width={{caseimage.width}}
+                    style="display: block; color: #1B89E6;"
+                  />
+                {{else}}
+                  <img
+                    src="https://coftech-media-store.s3.us-east-1.amazonaws.com/notifications/circulo.png"
+                    alt="Default Image"
+                    width="185"
+                    style="display: block; color: #1B89E6;"
+                  />
+                {{/if}}
+              </td>
+            </tr>
+            <tr>
+              <td style="padding: 15px 40px;">
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td>
+                      <div
+                        style="color: #0F172A; font-size: 24px; margin-bottom: 10px; text-align: center;"
+                      >
+                        {{title}}
+                      </div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <p
+                        style="margin: 0; margin-bottom: 3px; color: #0F172A;"
+                      >Dear administrator:</p>
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="margin: 0; border-radius: 6px;"
+                      >
+                        <tr>
+                          <td>
+                            <p style="margin: 0;color: #0F172A;">{{message}}</p>
+                          </td>
+                        </tr>
+                      </table>
+
+                      {{#if details}}
+                        <p
+                          style="margin: 0; margin-bottom: 3px; margin-top: 10px; color: #0F172A"
+                        >
+                          Details:
+                        </p>
+                        <table
+                          border="0"
+                          cellpadding="0"
+                          cellspacing="0"
+                          width="100%"
+                          style="border-radius: 6px; "
+                        >
+                          <tr>
+                            <td>
+                              <p
+                                style="margin: 0; color: #0F172A;"
+                              >{{details}}</p>
+                            </td>
+                          </tr>
+                        </table>
+                      {{/if}}
+
+                      <p style="font-size: 14px; color: #0F172A;">
+                        <strong>Date and time:</strong>
+                        {{timestamp}}
+                      </p>
+
+                      <table
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        width="100%"
+                        style="margin: 0 0 0px;"
+                      >
+                        <tr>
+                          <td align="center">
+                            <table
+                              border="0"
+                              cellpadding="0"
+                              cellspacing="0"
+                              style="display: inline-block;"
+                            >
+                              <tr>
+                                <td>
+                                  <a
+                                    href="https://app.coftechservices.com/"
+                                    style="
+                                                                        text-decoration: none !important;
+                                                                        display: block;
+                                                                        border-radius: 50px;
+                                                                        padding: 9px 25px;
+                                                                        background-color: #1B89E6;
+                                                                        margin: 20px;
+                                                                        box-shadow: 0 0 15px #2DD4FF;
+                                                                        color: #FFFFFF !important;
+                                                                        font-size: 14px;
+                                                                        text-shadow: 0 0 1px rgba(34, 34, 34, 0.8);
+                                                                        text-align: center;
+                                                                    "
+                                  >
+                                    Go to dashboard
+                                  </a>
+                                </td>
+                              </tr>
+                            </table>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <tr>
+              <td
+                style="background-color: #102A43; padding: 15px; border-top: 1px solid #102A43; border-bottom-left-radius: 8px; border-bottom-right-radius: 8px; border-top-left-radius: 30px;
+                border-top-right-radius: 30px;"
+              >
+                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                  <tr>
+                    <td align="center" style="font-size:12px; color:#CBD5E1;">
+
+                      <img
+                        src="https://coftech-media-store.s3.us-east-1.amazonaws.com/notifications/coftech-logo-blue.png"
+                        alt="Coftech Bot Logo"
+                        width="100"
+                        style="display: block; color: #1B89E6; margin: 20px;"
+                      />
+
+                      <p style="margin: 0;">This is an automated message from
+                        the Coftech Bot system.
+                      </p>
+                      <p style="margin: 2px 0 0px;">If you need additional help,
+                        contact our support team:</p>
+
+                      <p style="text-align: center; margin: 5px 0;">
+                        <a
+                          href="mailto:support@coftechservices.com"
+                          style="display: inline-block; margin: 10px 5px 10px 0; padding: 6px 12px; text-decoration: none; color: #2DD4FF; font-size: 12px;"
+                        >
+                          support@coftechservices.com
+                        </a>
+                        <a
+                          href="tel:+50768443002"
+                          style="display: inline-block; margin: 10px 5px 10px 0; padding: 6px 12px; text-decoration: none; color: #2DD4FF; font-size: 12px;"
+                        >
+                          +507 6844-3002
+                        </a>
+                        <a
+                          href="https://app.coftechservices.com/support"
+                          style="display: inline-block; margin: 10px 5px 10px 0; padding: 6px 12px; text-decoration: none; color: #2DD4FF; font-size: 12px;"
+                        >
+                          Support Portal
+                        </a>
+                      </p>
+
+                      <p style="margin: 0;">&copy; 2025 Copyright.</p>
+
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+          </table>
+
+        </td>
+      </tr>
+    </table>
+  </body>
+
+</html>
